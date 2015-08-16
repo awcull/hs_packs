@@ -4,21 +4,32 @@ namespace hs_packs
 {
 	public class Packs
 	{
-		public float common;
-		public float rare;
-		public float epic;
-		public float legendary;
-		public float gold;
-		
+		private float common;
+		private float rare;
+		private float epic;
+		private float legendary;
+		private float gold;
+
+		// Stores number of cars
+		private int commonCards;
+		private int rareCards;
+		private int epicCards;
+		private int legCards;
 
 		public Packs ()
 		{
-			Prob cardProb = new Prob ();
+			// Probability of card [0,100] %
 			common = 50.0;
 			rare = 9;
 			epic = 9;
 			legendary = 1.01;
 			gold = 5;
+
+			// Set up number of cards as basic set
+			commonCards = 300;
+			rareCards = 150;
+			epicCards = 100;
+			legCards = 75;
 		}
 
 
